@@ -1,0 +1,37 @@
+[
+    {
+        "idx": 1,
+        "question":"What types of websites do you develop?",
+        "answer":"All types, including e-commerce, business, portfolio, landing pages, blogs, news, membership and community websites."
+    },
+    {
+        "idx": 2,
+        "question":"How can you help me implement AI in my business?",
+        "answer":"Identify AI opportunities and use cases, develop an AI implementation strategy, assist with AI vendor selection and implementation, provide training and support to your staff."
+    },
+    {
+        "idx": 3,
+        "question":"What social media platforms do you manage?",
+        "answer":"All major platforms, including Facebook, Twitter, Instagram, LinkedIn, YouTube, and TikTok."
+    },
+    {
+        "idx": 4,
+        "question":"How do you measure the success of your campaigns?",
+        "answer":"Reach, engagement, website traffic, leads generated, and sales generated."
+    },
+    {
+        "idx": 5,
+        "question":"What are the benefits of using your AI consultation services?",
+        "answer":"Access to a team of experienced AI experts, a personalized and tailored approach to AI implementation, reduced risk and cost, faster time to value."
+    },
+    {
+        "idx": 6,
+        "question":"What are some of your current research projects?",
+        "answer":"Development of new AI algorithms and techniques, application of AI to real-world problems, development of new ML models and techniques, application of ML to real-world problems in cybersecurity."
+    },
+    {
+        "idx": 7,
+        "question":"How can I collaborate with you on a research project?",
+        "answer":"For this, contact us directly."
+    }
+]

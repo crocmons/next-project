@@ -19,11 +19,11 @@ export async function POST(request:any) {
     });
    
     
-  if(data.status === 'success'){
-      return NextResponse.json({
-          message:'Email sent successfully'
-      })
-  }  
+  // if(data.status === 'success'){
+  //     return NextResponse.json({
+  //         message:'Email sent successfully'
+  //     })
+  // }  
     return NextResponse.json(data);
   } catch (error:any) {
     return NextResponse.json({ error: error.message});

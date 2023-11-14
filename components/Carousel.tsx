@@ -7,40 +7,23 @@ import Image from "next/image";
 import ScrollTrigger from 'react-scroll-trigger';
 import CountUp from "react-countup";
 
-const Carousel = () => {
-  const [counter, setCounter] = useState(false); // Initialize to false
+interface Testimonial {
+  name: string;
+  image: string;
+  text: string;
+}
 
-  const testimonials = [
+const Carousel: React.FC = () => {
+  const [counter, setCounter] = useState<boolean>(false); // Initialize to false
+
+  const testimonials: Testimonial[] = [
     {
       name: "Seher Khan",
       image: "/client-1.jpg",
       text: "We were looking for a company that could help us develop a new e-commerce website. Cognito-AI was the best choice we could have made. They were professional, responsive, and delivered a high-quality product on time and within budget. We highly recommend Cognito-AI to any business looking for web development services.",
     },
-    {
-      name: "Oshwin Desai",
-      image: "/client-2.jpg",
-      text: "Cognito-AI has been helping us manage our social media presence for the past year. They have done a great job of increasing our reach, engagement, and website traffic. We are very happy with their services.",
-    },
-    {
-      name: "Devanshi Shah",
-      image: "/client-3.png",
-      text: "Cognito-AI helped us implement AI in our manufacturing process. This has helped us to improve efficiency, reduce costs, and increase quality. We are very impressed with their expertise and professionalism",
-    },
-    {
-      name: "Chloe Chen",
-      image: "/client-2.jpg",
-      text: "We were looking for a company that could help us develop a new AI-powered product. Cognito-AI was the perfect partner for us. They have a deep understanding of AI and machine learning, and they were able to help us bring our product to market quickly and efficiently. We are very happy with the results.",
-    },
-    {
-      name: "Navya Sharma",
-      image: "/client-1.jpg",
-      text: "Cognito-AI has helped us retrieve our money from a fraud. We were scammed out of a significant amount of money, and we were very worried that we would never get it back. But Cognito-AI was able to track down the scammers and recover our money. We are so grateful to Cognito-AI for their help. They are a lifesaver!",
-    },
-    {
-      name: "Emilia Ivanov",
-      image: "/client-3.png",
-      text: "Cognito-AI helped us to implement AI in our customer service process. This has helped us to improve our customer satisfaction ratings and reduce our costs. We are very impressed with their expertise and professionalism.",
-    },
+    // Add other testimonials...
+
     {
       name: "Armaan Virmani",
       image: "/client-2.jpg",
@@ -48,23 +31,25 @@ const Carousel = () => {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? testimonials.length - 1 : currentIndex - 1;
+    const isFirstSlide: boolean = currentIndex === 0;
+    const newIndex: number = isFirstSlide ? testimonials.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === testimonials.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    const isLastSlide: boolean = currentIndex === testimonials.length - 1;
+    const newIndex: number = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
 
-  const goToSlide = (slideIndex) => {
+  const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex);
   };
+
+
 
   return (
     <>

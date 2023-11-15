@@ -3,7 +3,7 @@
 import React, { FormEvent, useState } from "react";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
-import StarCanvas from "@/lib/utils/StarCanvas";
+import StarCanvas from "@/components/StarCanvas";
 import { toast } from "react-hot-toast";
 
 const ContactUS = () => {

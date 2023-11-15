@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 import GetApp from "@/components/GetApp";
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
-import StarsCanvas from "@/lib/utils/StarCanvas";
+import StarsCanvas from "@/components/StarCanvas";
 
 export default function Home() {
   return (

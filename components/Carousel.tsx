@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import FadeIn from "./FadeIn";
-import ScrollCount from "@/lib/utils/ScrollCount"
+import ScrollCount from "@/components/ScrollCount"
 
 const Carousel = () => {
 

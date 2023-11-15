@@ -55,7 +55,7 @@ export const NAV_LINKS = [
       icon: '/facebook.svg',
       variant: '#0077B6',
       description:
-        'Boost engagement and reach with strategic social media management for your brand can ultimately grow your company.',
+        'Boost engagement and reach with strategic social media management for your brand.',
     },
     // {
     //   title: 'Google Promotion',

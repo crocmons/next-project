@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import FadeIn from './FadeIn'
 import Button from './Button'
-import StarsCanvas from './StarCanvas'
+import StarsCanvas from '../lib/utils/StarCanvas'
 
 const OurServices = () => {
   return (

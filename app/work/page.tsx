@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import ProjectSlider from "@/components/ProjectSlider";
-import StarsCanvas from "@/components/StarCanvas";
+import StarsCanvas from "@/lib/utils/StarCanvas";
 
 const Work = () => {
   return (

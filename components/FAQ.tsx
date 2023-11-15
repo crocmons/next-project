@@ -3,7 +3,6 @@ import Image from 'next/image'
 import {useState} from 'react'
 import data from "@/lib/data.json"
 import Accordion from './Accordion'
-import StarsCanvas from './StarCanvas'
 
 type Props = {
     question: string,

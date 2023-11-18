@@ -27,8 +27,8 @@ export default function RootLayout({
         <div className="main">
             <div className="gradient" />
           </div>
-        <main className="app">
         <Navbar />
+        <main className="app">
         {children}
         <div className='whatsapp'>
           <FadeIn>

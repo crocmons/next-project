@@ -75,7 +75,7 @@ const ScrollCount = () => {
         >
           <div className="max-w-[1100px] justify-center w-full m-auto py-12 px-4 relative group overflow-hidden bg-gradient-3 text-white rounded-2xl bg-center bg-cover bg-no-repeat">
             <h1 className="font-bold text-5xl mx-3 flex justify-center items-center top-10 py-2 my-3">
-              {counter && <CountUp start={0} end={1500} duration={2} delay={0} />}+
+              {counter && <CountUp start={0} end={1539} duration={2} delay={0} />}+
             </h1>
             <div className="glassmorphism flex flex-col md:flex-row md:w-[60%] w-[100%] mx-auto space-x-2 h-auto justify-center items-center">
               <p className="regular-20 mt-3 p-2">

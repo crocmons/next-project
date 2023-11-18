@@ -34,7 +34,7 @@ const GetApp = () => {
         </FadeIn>
 
         <div className="flex flex-1 items-center justify-end">
-          <Image src="/phones.png" alt="phones" width={350} height={380} />
+          <Image src="/mobileimg.png" alt="phones" width={380} height={380} />
         </div>
       </div>
     </section>

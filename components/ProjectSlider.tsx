@@ -43,7 +43,7 @@ const ProjectSlider = () => {
                           <div className='absolute inset-0 bg-black opacity-10 group-hover:opacity-50 cursor-pointer'/>
 
                           <div className='relative flex flex-col gap-3'>
-                            <h1 className='font-bold text-lg text-slate-100 group-hover:text-3xl  justify-center items-center mx-auto'>
+                          <h1 className='font-bold hidden group-hover:block group-hover:text-white group-hover:text-2xl  justify-center items-center mx-auto'>
                               {project.title}
                             </h1>
                           </div>

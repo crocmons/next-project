@@ -7,12 +7,12 @@ import StarsCanvas from './StarCanvas'
 
 const OurServices = () => {
   return (
-    <section className="my-5 flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
+    <section className=" flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-10">
       <div className="max-container padding-container relative w-full flex justify-center">
 
         <div className="z-20 flex w-full flex-col lg:w-[90%]">
           <FadeIn>
-          <div className='relative flex flex-col justify-center items-center mx-auto'>
+          <div className=' flex flex-col justify-center items-center mx-auto'>
             
             <h2 className="bold-40 lg:bold-64">Our Services</h2>
             <p className='regular-18 mt-6 text-gray-500 mb-5'>Whether you're seeking cutting-edge technology solutions, a captivating online presence, or a results-driven digital marketing strategy, our team of experts is dedicated to delivering excellence across all facets of your digital journey. Partner with us and experience the power of seamless integration and unmatched expertise in every service we provide.</p>

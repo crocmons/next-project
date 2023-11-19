@@ -24,7 +24,7 @@ const ContactUS: React.FC = () => {
 
   const [valid, setValid] = useState(true);
 
-  const handleChange = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (e && e.target) {
       const { name, value } = e.target;
   
@@ -38,6 +38,7 @@ const ContactUS: React.FC = () => {
       }
     }
   };
+  
   
   
 

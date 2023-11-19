@@ -133,7 +133,7 @@ const ContactUS: React.FC = () => {
               <div className="flex flex-col">
                 <label htmlFor="number">Mobile Number</label>
                 <PhoneInput
-                  inputStyle="py-3 px-2 hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg transition-all"
+                  className="py-3 px-2 hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg transition-all"
                   defaultCountry="IN"
                   name="number"
                   onChange={(e)=>handleNumberChange}

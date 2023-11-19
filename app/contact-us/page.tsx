@@ -1,5 +1,5 @@
 "use client"
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useState, ChangeEventHandler } from "react";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
 import StarCanvas from "@/components/StarCanvas";
@@ -24,22 +24,37 @@ const ContactUS: React.FC = () => {
 
   const [valid, setValid] = useState(true);
 
-  const handleChange = (value: string, metadata: any, event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    value: string,
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name } = event.target;
-  
+
     setData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-  
+
     if (name === 'number') {
       setValid(validatePhoneNumber(value));
     }
   };
-  
-  
-  
-  
+
+  const handleNameChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    handleChange(event.target.value, event);
+  };
+
+  const handleEmailChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    handleChange(event.target.value, event);
+  };
+
+  const handleMessageChange: ChangeEventHandler<HTMLTextAreaElement> = (event) => {
+    handleChange(event.target.value, event);
+  };
+
+  const handleNumberChange = (value: string, metadata: any, event: React.ChangeEvent<HTMLInputElement>) => {
+    handleChange(value, event);
+  };
 
   const validatePhoneNumber = (phnum: string): boolean => {
     const phonenumberPattern = /^\d{10}$/;
@@ -58,7 +73,7 @@ const ContactUS: React.FC = () => {
         body: JSON.stringify(data),
       });
 
-      if (response.status === 200) {
+      if (response.ok) {
         setData({
           name: "",
           email: "",
@@ -66,12 +81,15 @@ const ContactUS: React.FC = () => {
           number: "",
         });
         toast.success(`Hi ${data.name}, your message has been sent successfully!`);
+      } else {
+        toast.error("An error occurred while sending the email.");
       }
     } catch (error) {
       console.error("Error sending email:", error);
       toast.error("An error occurred while sending the email.");
     }
   };
+
 
   return (
     <div className="mt-3 mx-auto mb-6 items-center justify-center">
@@ -95,7 +113,7 @@ const ContactUS: React.FC = () => {
                   type="text"
                   name="name"
                   value={data.name}
-                  onChange={handleChange}
+                  onChange={handleNameChange}
                   id="name"
                   placeholder="Enter Your Full Name"
                 />
@@ -106,7 +124,7 @@ const ContactUS: React.FC = () => {
                   className="py-3 px-2 rounded-lg hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] transition-all"
                   type="email"
                   name="email"
-                  onChange={handleChange}
+                  onChange={handleEmailChange}
                   value={data.email}
                   id="email"
                   placeholder="Enter Your Email"
@@ -115,10 +133,10 @@ const ContactUS: React.FC = () => {
               <div className="flex flex-col">
                 <label htmlFor="number">Mobile Number</label>
                 <PhoneInput
-                  className="py-3 px-2 hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg transition-all"
+                  inputStyle="py-3 px-2 hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg transition-all"
                   defaultCountry="IN"
                   name="number"
-                  onChange={handleChange}
+                  onChange={(e)=>handleNumberChange}
                   value={data.number}
                   id="number"
                   inputProps={{ required: true }}
@@ -132,7 +150,7 @@ const ContactUS: React.FC = () => {
                   name="message"
                   id="message"
                   value={data.message}
-                  onChange={handleChange}
+                  onChange={handleMessageChange}
                   cols={30}
                   rows={3}
                   placeholder="Enter Your Message"

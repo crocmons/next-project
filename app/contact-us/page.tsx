@@ -24,20 +24,19 @@ const ContactUS: React.FC = () => {
 
   const [valid, setValid] = useState(true);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    if (e && e.target) {
-      const { name, value } = e.target;
+  const handleChange = (value: string, metadata: any, event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name } = event.target;
   
-      setData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
+    setData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   
-      if (name === 'number') {
-        setValid(validatePhoneNumber(value));
-      }
+    if (name === 'number') {
+      setValid(validatePhoneNumber(value));
     }
   };
+  
   
   
   
